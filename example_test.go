@@ -1,12 +1,13 @@
 package evdev_test
 
 import (
-	. "evdev"
 	"fmt"
+
+	evdev "github.com/gvalkov/golang-evdev"
 )
 
 func ExampleOpen() {
-	device, _ := Open("/dev/input/event3")
+	device, _ := evdev.Open("/dev/input/event3")
 	fmt.Println(device)
 }
 
@@ -20,7 +21,7 @@ func ExampleListInputDevices() {
 }
 
 func Example() {
-	device, _ := Open("/dev/input/event3")
+	device, _ := evdev.Open("/dev/input/event3")
 
 	fmt.Println(device)
 	// InputDevice /dev/input/event3 (fd 3)
@@ -30,12 +31,6 @@ func Example() {
 	//   events EV_KEY 1, EV_SYN 0, EV_REL 2, EV_MSC 4
 
 	fmt.Println(device.Capabilities)
-	// map[ 4:[4 272 273 274 275 276 277 278 279]
-	//      0:[0 1 2 4]
-	//      2:[0 1 6 8 272 273 274 275 276 277 278 279]
-	//      1:[272 273 274 275 276 277 278 279] ]
-
-	fmt.Println(device.ResolveCapabilities())
 	// map[ 4:[4 272 273 274 275 276 277 278 279]
 	//      0:[0 1 2 4]
 	//      2:[0 1 6 8 272 273 274 275 276 277 278 279]
