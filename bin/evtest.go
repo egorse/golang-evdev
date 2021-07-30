@@ -1,4 +1,5 @@
 // +build linux
+
 // Input device event monitor.
 package main
 
