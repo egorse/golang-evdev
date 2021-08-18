@@ -7,7 +7,10 @@ passing events generated in the kernel directly to userspace through
 character devices that are typically located in `/dev/input/`.
 
 Documentation:
-    http://godoc.org/github.com/gvalkov/golang-evdev
+    http://godoc.org/github.com/egorse/golang-evdev
 
 Development:
+    https://github.com/egorse/golang-evdev
+
+Originally clonned from:
     https://github.com/gvalkov/golang-evdev

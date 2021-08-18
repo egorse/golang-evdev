@@ -3,7 +3,7 @@ package evdev_test
 import (
 	"fmt"
 
-	evdev "github.com/gvalkov/golang-evdev"
+	evdev "github.com/egorse/golang-evdev"
 )
 
 func ExampleOpen() {

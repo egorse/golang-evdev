@@ -9,7 +9,7 @@ import (
 	"os"
 	"strings"
 
-	evdev "github.com/gvalkov/golang-evdev"
+	evdev "github.com/egorse/golang-evdev"
 )
 
 const (

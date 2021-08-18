@@ -70,7 +70,7 @@ func init() {
 		case strings.HasPrefix(code, "LED"):
 			LED[value] = code
 		case strings.HasPrefix(code, "BTN"):
-			BTN[value] = code
+			KEY[value] = code
 		case strings.HasPrefix(code, "SND"):
 			SND[value] = code
 		case strings.HasPrefix(code, "ID"):
